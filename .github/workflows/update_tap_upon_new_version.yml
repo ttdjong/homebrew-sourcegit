@@ -59,5 +59,7 @@ jobs:
           cd "$(brew --repository ybeapps/homebrew-sourcegit)"
           brew bump-cask-pr --no-fork --version "$VERSION" --no-browse --message "Update SourceGit to version $VERSION" --write-only --commit sourcegit
           git status
+          git diff
+          cat ./Casks/sourcegit.rb
           git push origin main
 
